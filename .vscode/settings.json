@@ -1,0 +1,8 @@
+{
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.formatter.provider": "black",
+    "python.formatter.blackPath": "C:/Users/User/FY25/Ecommerce-Project/venv/Scripts/black.exe"
+}
