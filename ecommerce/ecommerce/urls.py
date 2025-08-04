@@ -24,12 +24,14 @@ from drf_spectacular.views import SpectacularAPIView,SpectacularSwaggerView,Spec
 
 router = DefaultRouter()
 router.register(r"category",views.CategoryView)
+router.register(r"brand",views.BrandViewSet)
+router.register(r"product",views.ProductViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include(router.urls)),
 
     path('api/schema/',SpectacularAPIView.as_view(), name="schema"),
-    path('api/schema/swagger-ui',SpectacularSwaggerView.as_view(url_name ="schema"), name="swagger-ui"),
+    path('api/schema/docs',SpectacularSwaggerView.as_view(url_name ="schema"), name="swagger-ui"),
     path('api/schema/redhoc',SpectacularRedocView.as_view(url_name ="schema"), name="redhoc")
 ]
